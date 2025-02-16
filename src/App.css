@@ -1,0 +1,20 @@
+.list_item_details{
+	display: grid;
+	grid-template-columns: 9fr 3fr;
+	gap: 20px;
+}
+.listing{
+	display: grid;
+	grid-template-columns: 3fr 10fr;
+	gap: 20px;
+}
+
+input[type='checkbox']{
+	width: 16px;
+	height: 16px;
+}
+.list-unstyled li label{
+	display: flex;
+	gap:10px;
+	align-items: center;
+}
