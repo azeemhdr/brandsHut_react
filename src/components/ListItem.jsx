@@ -1,8 +1,5 @@
 import React from "react";
 import imgProduct from "../Images/product (1).webp";
-import imgProduct2 from "../Images/product (2).webp";
-import imgProduct3 from "../Images/product (3).webp";
-import imgProduct4 from "../Images/product (4).webp";
 import AddToCart from "./AddToCart";
 
 export default function ListItem({price,discount}) {
