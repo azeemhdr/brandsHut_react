@@ -4,6 +4,7 @@ import product_1 from "../Images/product (5).webp";
 import product_2 from "../Images/product (6).webp";
 import product_3 from "../Images/product (7).webp";
 import product_4 from "../Images/product (8).webp";
+import RelatedProduct from "./RelatedProduct";
 
 export default function Product() {
   const [currentImage, SetCurrentImage] = useState(product_image);
@@ -20,7 +21,7 @@ export default function Product() {
   return (
     <div>
       <div className="container">
-        <div className="row">
+        <div className="row py-3">
           <div className="col-md-6">
             <div className="sticky-top">
               <img
@@ -241,8 +242,9 @@ export default function Product() {
               </tbody>
             </table>
           </div>
-		  <hr />
-		  <h4>Related Products</h4>
+          <hr />
+          <h4>Related Products</h4>
+         <RelatedProduct/>
         </div>
       </div>
     </div>
