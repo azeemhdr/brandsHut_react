@@ -34,3 +34,7 @@ input[type='checkbox']{
 .qty_btns button:not(:first-child){
 	background-color: #ddd;
 }
+
+.hide{
+	display: none!important;
+}

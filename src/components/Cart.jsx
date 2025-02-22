@@ -1,5 +1,6 @@
 import React from 'react'
 import CartItem from './CartItem'
+import RelatedProduct from './RelatedProduct'
 
 export default function Cart() {
   return (
@@ -13,7 +14,6 @@ export default function Cart() {
 					<CartItem/>
 					<CartItem/>
 					<CartItem/>
-				
 					</div>
 				</div>
 				<div className="col-md-4">
