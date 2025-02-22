@@ -2,6 +2,10 @@
 	background-color: rgba(8, 8, 8, 0.678);
 	position: fixed;
 	inset: 0 0 0 0;
+	/* using this for animation effect */
+	opacity: 0; 
+	visibility: hidden;
+	transition: 300ms ease-in-out, opacity 500ms ease-in-out;
 }
 
 .address_modal_wrapper{
@@ -15,9 +19,13 @@
 /* alternate method to show modal by using these classes block and none */
 
 .hideModal{
-	display: none!important;
+	/* display: none!important; */
+	opacity: 0;
+	visibility: hidden;
 }
 
 .showModal{
-	display: block!important;
+	/* display: block!important; */
+	opacity: 1;
+	visibility: visible;
 }
