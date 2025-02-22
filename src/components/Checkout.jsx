@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-// import styles from "./Modal.module.css";
+import styles from "./Modal.module.css";
 
 export default function Checkout() {
-// const[isModal,setIsModal]=useState(false);
-  const[paymentMethod,setPaymentMethod]=useState('COD');
-
+  const[isModal,setIsModal]=useState(false);
+  const [paymentMethod, setPaymentMethod] = useState("COD");
 
   return (
     <div>
@@ -14,7 +13,7 @@ export default function Checkout() {
             <form className="form">
               <div className="mb-4">
                 <h4 className="mb-3">Delivery</h4>
-                <button type="button" className="btn btn-primary mb-3	">
+                <button type="button" className="btn btn-primary mb-3" onClick={() => { setIsModal(true) }}>
                   + ADD ADDRESS
                 </button>
                 <div className="row">
@@ -57,7 +56,10 @@ export default function Checkout() {
                     <input
                       type="radio"
                       name="payment_method"
-                      value={"Credit/Debit Card"} onChange={()=>{setPaymentMethod('CARD')}}
+                      value={"Credit/Debit Card"}
+                      onChange={() => {
+                        setPaymentMethod("CARD");
+                      }}
                     />
                     Credit/Debit Card
                   </label>
@@ -66,13 +68,20 @@ export default function Checkout() {
                       <input
                         type="radio"
                         name="payment_method"
-                        value={"Net Banking"} onChange={()=>{setPaymentMethod('NET-BANKING')}}
+                        value={"Net Banking"}
+                        onChange={() => {
+                          setPaymentMethod("NET-BANKING");
+                        }}
                       />
                       Net Banking
                     </label>
                     <select
-                      className={(paymentMethod === 'NET-BANKING') ? 'form-control form-select w-50 mb-2 show' : 'hide'}
-                      id="" 
+                      className={
+                        paymentMethod === "NET-BANKING"
+                          ? "form-control form-select w-50 mb-2 show"
+                          : "hide"
+                      }
+                      id=""
                     >
                       <option value={" "}>Select Bank</option>
                       <option value={"State Bank of India"}>
@@ -83,24 +92,46 @@ export default function Checkout() {
                   </div>
                   <div>
                     <label htmlFor="" className="d-block mb-2">
-                      <input type="radio" name="payment_method" value={"UPI"} onChange={()=>{setPaymentMethod('UPI')}} />
+                      <input
+                        type="radio"
+                        name="payment_method"
+                        value={"UPI"}
+                        onChange={() => {
+                          setPaymentMethod("UPI");
+                        }}
+                      />
                       UPI
                       <input
                         type="text"
-                        className={(paymentMethod==="UPI")?"form-control w-50 mb-2 show":"hide"}
-                      placeholder="Enter Your UPI ID"/>
+                        className={
+                          paymentMethod === "UPI"
+                            ? "form-control w-50 mb-2 show"
+                            : "hide"
+                        }
+                        placeholder="Enter Your UPI ID"
+                      />
                     </label>
                   </div>
                   <label htmlFor="" className="d-block mb-2">
                     <input
                       type="radio"
                       name="payment_method"
-                      value={"  Wallet"} onChange={()=>{setPaymentMethod('WALLET')}}
+                      value={"  Wallet"}
+                      onChange={() => {
+                        setPaymentMethod("WALLET");
+                      }}
                     />
                     Wallet
                   </label>
                   <label htmlFor="" className="d-block mb-2">
-                    <input type="radio" name="payment_method" value={"COD"}  onChange={()=>{setPaymentMethod("COD")}}/>
+                    <input
+                      type="radio"
+                      name="payment_method"
+                      value={"COD"}
+                      onChange={() => {
+                        setPaymentMethod("COD");
+                      }}
+                    />
                     COD (Cash on Delivery)
                   </label>
                 </div>
@@ -108,22 +139,18 @@ export default function Checkout() {
               <button className="btn btn-lg btn-warning">Place Order</button>
             </form>
           </div>
-		      <div className="col-md-4">
-
-		      </div>
+          <div className="col-md-4"></div>
         </div>
-		<div className="">
-			<div className='modal' id="demo" tabindex="-1">
-				<div className="modal-dialog">
-					<div className="modal-content">
-						
-						<div className="modal-header">
-							<div className="modal-title">Add New Address</div>
-							<button className="btn-close" ></button>
-						</div>
-
-						<div className="modal-body">
-							<form action="">
+        {isModal && (
+        <div className={` ${styles.address_modal} `}>
+              <div className={` ${styles.address_modal_wrapper } `}>
+                <div className="address_form_wrapper p-3 bg-light rounded shadow w-50">
+                <div className="d-flex justify-content-between p-2">
+                <h4 className="fw-bold fs-3">Add New Address</h4>
+                <button className="btn btn-close" onClick={()=>{setIsModal(false)}}></button>
+                </div>
+                <hr className="mt-0"/>
+                  <form action="" className="px-3">
 								<div className="mb-3">
 									<input type="text" name="name" id="" placeholder="Enter your name" className="form-control" />
 								</div>
@@ -156,11 +183,10 @@ export default function Checkout() {
                                 </div>
 								<button className="btn btn-primary">Add Address</button>
 							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                </div>
+              </div>
+        </div>
+        )}
       </div>
     </div>
   );

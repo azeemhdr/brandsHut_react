@@ -1,4 +1,23 @@
-.modal_address{
-	background-color: rgba(17, 17, 17, 0.411);
-	display: block;
+.address_modal{
+	background-color: rgba(8, 8, 8, 0.678);
+	position: fixed;
+	inset: 0 0 0 0;
+}
+
+.address_modal_wrapper{
+	padding: 20px!important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+/* alternate method to show modal by using these classes block and none */
+
+.hideModal{
+	display: none!important;
+}
+
+.showModal{
+	display: block!important;
 }
