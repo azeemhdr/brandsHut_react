@@ -2,6 +2,7 @@
 	background-color: rgba(8, 8, 8, 0.678);
 	position: fixed;
 	inset: 0 0 0 0;
+	z-index:9999;
 	/* using this for animation effect */
 	opacity: 0; 
 	visibility: hidden;

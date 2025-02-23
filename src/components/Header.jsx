@@ -1,5 +1,6 @@
 import React from "react";
 import logo from '../Images/B.webp'
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -43,15 +44,15 @@ export default function Header() {
                 type="button"
                 className="btn btn-link px-3 me-2"
               >
-                Login
+               <Link to={"/login"}>Login</Link> 
               </button>
-              <button
+              <Link
                 data-mdb-ripple-init
-                type="button"
+                to={"/register"}
                 className="btn btn-primary me-3"
               >
                 Sign up for free
-              </button>
+              </Link>
               <a
                 data-mdb-ripple-init
                 className="btn btn-dark px-3"

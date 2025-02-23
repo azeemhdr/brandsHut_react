@@ -38,3 +38,7 @@ input[type='checkbox']{
 .hide{
 	display: none!important;
 }
+
+.w-33{
+width: 33.33%!important;
+}

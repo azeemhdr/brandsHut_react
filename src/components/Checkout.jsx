@@ -26,6 +26,21 @@ export default function Checkout() {
                   </div>
                 </div>
               </div>
+              <div className="col-md-2 p-0 ">
+                <div className="p-1">
+                  <img src={product_image} alt="" className="img-fluid " />
+                </div>
+              </div>
+              <div className="col-md-10 ">
+                <div className="list_item_details p-3">
+                  <div>
+                    <h6 className="fw-bold">
+                      Green Giza Satin Cotton Full Sleeve Formal Shirt For Men
+                    </h6>
+                    <p className="fw-bold">Product delivered by tomorrow</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <form className="form">
               <div className="mb-4">
@@ -163,7 +178,7 @@ export default function Checkout() {
             </form>
           </div>
           <div className="col-md-4">
-            <div className="border p-4 rounded">
+            <div className="border p-4 sticky-top rounded">
               <table className="table table-info  table-hover">
                 <thead>
                   <th className="fs-4">Products</th>
