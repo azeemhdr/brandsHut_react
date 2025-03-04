@@ -13,6 +13,7 @@ const cartSlice = createSlice({
 		addToCart:(state,action)=>{
 			// we take two parameters 1.state 2. action in "action object there is property which name is payload and in payload there is a value we get".
 			state.cart.push(action.payload)
+			console.log(action.payload)
 		}
 	}
 })

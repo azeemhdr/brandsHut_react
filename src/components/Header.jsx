@@ -1,8 +1,10 @@
 import React from "react";
 import logo from '../Images/B.webp'
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Header() {
+  const cart = useSelector((state)=>state.cart.cart)
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-body-tertiary">
@@ -47,20 +49,17 @@ export default function Header() {
                <Link to={"/login"}>Login</Link> 
               </button>
               <Link
-                data-mdb-ripple-init
+                
                 to={"/register"}
                 className="btn btn-primary me-3"
               >
                 Sign up for free
               </Link>
-              <a
-                data-mdb-ripple-init
-                className="btn btn-dark px-3"
-                href="https://github.com/mdbootstrap/mdb-ui-kit"
-                role="button"
+              <Link to={"/cart"}
+                
               >
-                <i className="fab fa-github"></i>
-              </a>
+                Cart{cart.length}
+              </Link>
             </div>
           </div>
         </div>

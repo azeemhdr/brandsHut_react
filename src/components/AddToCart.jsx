@@ -3,7 +3,7 @@ import { useDispatch,useSelector } from 'react-redux';
 import { addToCart } from '../redux/CartSlice';
 
 export default function AddToCart() {
-	const cartValue = useSelector((state)=>state.myCart.cart) //state.name.value
+	const cartValue = useSelector((state)=>state.cart.cart) //state.name.value
 
 	const dispatch = useDispatch()
 	return (
