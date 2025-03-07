@@ -3,7 +3,7 @@ import { useDispatch,useSelector } from 'react-redux';
 import { addToCart } from '../redux/CartSlice';
 
 export default function AddToCart() {
-	const cartValue = useSelector((state)=>state.cart.cart) //state.name.value
+	const cart = useSelector((state)=>state.cart.cart) //state.name.value {if i'm using name it shows error(myCart)}
 
 	const dispatch = useDispatch()
 	return (
@@ -12,3 +12,6 @@ export default function AddToCart() {
 	</div>
   )
 }
+
+
+// 1. how we get to know that the payload is store in the cart/[array] where we store the value? in console it shows null.
