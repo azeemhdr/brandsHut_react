@@ -9,15 +9,15 @@ export default function Header() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-body-tertiary">
         <div className="container">
-          <a className="navbar-brand me-2" href="https://mdbgo.com/">
+          <Link className="navbar-brand me-2" to={'/'}>
             <img
               src={logo}
               height="50"
-              alt="MDB Logo"
+              alt="Brands Hut"
               loading="lazy"
               style={{marginTop: -1}}
             />
-          </a>
+          </Link>
 
           <button
             data-mdb-collapse-init
@@ -34,9 +34,9 @@ export default function Header() {
           <div className="collapse navbar-collapse" id="navbarButtonsExample">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to={'/dashboard'}>
                   Dashboard
-                </a>
+                </Link>
               </li>
             </ul>
 
