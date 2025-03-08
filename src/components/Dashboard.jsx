@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Dashboard() {
   return (
-	<div>
-		<div className='container vh-100'>
+	<div className=''>
+		<div className='container'>
 			<h4 className='mt-3'>Hi Azeem Haider</h4>
 			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam veniam delectus expedita maiores velit ipsum odit? Ducimus voluptatem tenetur aperiam officiis sit voluptatum ex consectetur id, expedita temporibus debitis dolorem.</p>
 			<div className='mt-3'>
